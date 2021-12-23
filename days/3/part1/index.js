@@ -10,6 +10,8 @@ var epsilon_binary_string = "";
 var gamma_decimal = 0;
 var epsilon_decimal = 0;
 
+var filtered_binaries = [];
+
 for (const binary_untrimmed of binaries) {
   var binary = binary_untrimmed.trim();
   for (var i = 0; i < binary.length; i++) {
@@ -43,7 +45,9 @@ console.log("Gamma:", gamma_binary_string);
 console.log("Epsilon:", epsilon_binary_string);
 
 gamma_decimal = parseInt(gamma_binary_string, 2);
-epsilon_decimal = parseInt(epsilon_binary_string, 2);
+//epsilon_decimal = parseInt(epsilon_binary_string, 2);
+
+epsilon_decimal = ~gamma_decimal;
 
 console.log("Gamma:", gamma_decimal);
 console.log("Epsilon:", epsilon_decimal);

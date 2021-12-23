@@ -6,7 +6,7 @@ export const readFile = (path) => {
       if (err) {
         reject(err);
       } else {
-        var array = data.toString().split("\n");
+        var array = data.toString().split("\r\n");
         resolve(array);
       }
     });
